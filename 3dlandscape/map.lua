@@ -3,7 +3,7 @@ local map = {}
 local
 function corner3(pos2)
     local soil = math.simplex(pos2/100)*3
-    local rock = (math.simplex(-pos2/20)^3)*11+(math.simplex(pos2)^5)*2-1
+    local rock = (math.simplex(-pos2/20)^3)*5+(math.simplex(pos2)^5)*1 - (math.simplex(pos2/500)) * 7
     local color =
         rock > 6 and vec3(1.0)
         or rock >= soil-0.5 and vec3(0.5, 0.5, 0.5)
